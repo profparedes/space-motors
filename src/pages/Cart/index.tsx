@@ -94,6 +94,8 @@ const Cart: React.FC = () => {
   setValue('cidade', address?.localidade ?? '');
   // eslint-disable-next-line no-console
   console.log('errors', errors, isDirty);
+
+  // testando o git
   return (
     <>
       <Header />
