@@ -96,6 +96,7 @@ const Cart: React.FC = () => {
   console.log('errors', errors, isDirty);
 
   // testando o git
+  // colocando uma alteracao no master
   return (
     <>
       <Header />
