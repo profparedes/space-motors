@@ -84,6 +84,7 @@ const Home: React.FC = () => {
             {error && <h2 className="text-center">{error}</h2>}
             {!isLoading &&
               !error &&
+              Array.isArray(vehicles) &&
               vehicles.map((vehicle) => (
                 <Col className="d-flex" key={vehicle.name}>
                   <VehicleCard vehicle={vehicle} />
