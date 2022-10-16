@@ -55,14 +55,10 @@ const Cart: React.FC = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [formRegistration, setFormRegistration] = useState<FormType>();
 
-  const handleFormSubmit = useCallback(
-    (data: FormType) => {
-      setFormRegistration(data);
-      // eslint-disable-next-line no-console
-      console.log('Form:', formRegistration);
-    },
-    [formRegistration],
-  );
+  const handleFormSubmit = useCallback((data: FormType) => {
+    setFormRegistration(data);
+    // eslint-disable-next-line no-console
+  }, []);
 
   const hasErrors = useMemo(() => Object.keys(errors).length > 0, [errors]);
 
