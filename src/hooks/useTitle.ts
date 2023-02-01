@@ -7,7 +7,7 @@ type UseTitleType = () => (title?: string | undefined) => void;
 const useTitle: UseTitleType = () => {
   const setTitle = useCallback((title?: string) => {
     const appName = Config.app.name ?? `My React App v${Config.app.version}`;
-    document.title = title ? `${title} | ${appName}` : appName;
+    document.title = title ? title : appName;
   }, []);
 
   return useMemo(() => setTitle, [setTitle]);
